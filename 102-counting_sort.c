@@ -4,7 +4,7 @@
   *counting_sort- Function to sort array of intergers
   *using counting sort algorithm
   *
-  *@array; The array of integers
+  *@array: The array of integers
   *@size: The size
   */
 
@@ -33,7 +33,7 @@ void counting_sort(int *array, size_t size)
 		temp = counter[idx] + temp;
 		counter[idx] = temp;
 	}
-	print_array(counter, maximum +1);
+	print_array(counter, maximum + 1);
 	results = malloc(sizeof(int) * size);
 	if (!results)
 		return;

@@ -2,8 +2,6 @@
 
 /**
   *counting_sort- Function to sort array of intergers
-  *using counting sort algorithm
-  *
   *@array: The array of integers
   *@size: The size
   */

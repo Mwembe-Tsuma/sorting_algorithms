@@ -2,8 +2,6 @@
 
 /**
   *selection_sort- Selection sort function
-  *to sort arrays of int in ascendind order
-  *
   *@array: The array to sort
   *@size: The size
   */

@@ -17,12 +17,10 @@ void print_arr(int *array, int Beg, int End)
 	int idx;
 
 	for (idx = Beg; idx < End; idx++)
-	{
 		if (idx < End - 1)
 			printf("%i, ", array[idx]);
 		else
 			printf("%i\n", array[idx]);
-	}
 }
 /**
   *copy_array- Copies array from source to destination
@@ -38,6 +36,7 @@ void copy_array(int *src, int Beg, int End, int *dest)
 	for (idx = Beg; idx < End; idx++)
 		dest[idx] = src[idx];
 }
+
 /**
   *top_merge- Sorts sublist by ascending order
   *@src: source array
@@ -49,32 +48,32 @@ void copy_array(int *src, int Beg, int End, int *dest)
 
 void top_merge(int *src, int Beg, int Mid, int End, int *dest)
 {
-	int idx, temp, res;
+	int idx, x, y;
 
-	idx = Beg, temp = Mid;
+	idx = Beg, x = Mid;
 
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_arr(src, Beg, Mid);
 	printf("[right]: ");
-	print_arr(src, Beg, Mid);
-
-	for (res = Beg; res < End; res++)
+	print_arr(src, Mid, End);
+	for (y = Beg; y < End; y++)
 	{
-		if (idx < Mid && (temp >= End || src[idx] <= src[temp]))
+		if (idx < Mid && (x >= End || src[idx] <= src[x]))
 		{
-			dest[res] = src[idx];
+			dest[y] = src[idx];
 			idx++;
 		}
 		else
 		{
-			dest[res] = src[temp];
-			temp++;
+			dest[y] = src[x];
+			x++;
 		}
 	}
 	printf("[Done]: ");
 	print_arr(dest, Beg, End);
 }
+
 /**
   *top_split_merge- Split and merge function
   *@Beg: Begining index
@@ -110,6 +109,7 @@ void merge_sort(int *array, size_t size)
 	copy = malloc(sizeof(int) * size);
 	if (!copy)
 		return;
+
 	copy_array(array, 0, size, copy);
 	top_split_merge(copy, 0, size, array);
 

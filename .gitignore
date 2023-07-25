@@ -1,4 +1,15 @@
 test.c
+*0-main.c
+*3-main.c
+*105-main.c
+*106-main.c
+*107-main.c
+*1000-main.c
+*print_array.c
+*print_list.c
+*quick
+*radix
+
 # Prerequisites
 *.d
 

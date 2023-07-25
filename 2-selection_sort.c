@@ -7,7 +7,6 @@
   *@array: The array to sort
   *@size: The size
   */
-
 void selection_sort(int *array, size_t size)
 {
 	int temp, swapped, flags = 0;

@@ -19,9 +19,9 @@ void print_arr(int *array, int Beg, int End)
 	for (idx = Beg; idx < End; idx++)
 	{
 		if (idx < End - 1)
-			printf("%idx, ", array[idx]);
+			printf("%i, ", array[idx]);
 		else
-			printf("%idx\n", array[idx]);
+			printf("%i\n", array[idx]);
 	}
 }
 /**

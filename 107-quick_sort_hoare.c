@@ -46,8 +46,11 @@ int hoare_partition(int *array, int low, int high, size_t size)
 		} while (array[b] > pivot);
 		if (a >= b)
 			return (b);
-		swap(&array[a], &array[b]);
-		print_array(array, size);
+		if (a != b)
+		{
+			swap(&array[a], &array[b]);
+			print_array(array, size);
+		}
 	}
 	return (0);
 }

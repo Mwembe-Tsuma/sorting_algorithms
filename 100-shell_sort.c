@@ -1,12 +1,12 @@
 #include "sort.h"
 
 /**
-  *shell_sort- Sorts arr of ints in ascending order
-  *using shell sort algorithm
+  *shell_sort- Sorts arr of ints in ascending order using shell algorithm
   *@array: The arrays of integers
   *@size: The size
   *
   */
+
 void shell_sort(int *array, size_t size)
 {
 	int idx, j, n, gap, max_knuth, tmp;

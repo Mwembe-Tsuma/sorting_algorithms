@@ -1,23 +1,7 @@
 #include "sort.h"
-void swap(int *a, int *b);
+
 int hoare_partition(int *array, int low, int high, size_t size);
 void quick_sort_recursive(int *array, int low, int high, size_t size);
-
-/**
- * swap - function to swap two integers
- * @a: first int
- * @b: second int
- *
- * Return: 0
- */
-void swap(int *a, int *b)
-{
-	int temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
 
 /**
  * hoare_partition - partitions an array
@@ -30,7 +14,7 @@ void swap(int *a, int *b)
  */
 int hoare_partition(int *array, int low, int high, size_t size)
 {
-	int pivot = array[high];
+	int pivot = array[high], temp;
 	size_t a, b;
 
 	a = low - 1;
@@ -48,7 +32,9 @@ int hoare_partition(int *array, int low, int high, size_t size)
 			return (b);
 		if (a != b)
 		{
-			swap(&array[a], &array[b]);
+			temp = array[a];
+			array[a] = array[b];
+			array[b] = temp;
 			print_array(array, size);
 		}
 	}

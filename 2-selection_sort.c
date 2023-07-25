@@ -2,6 +2,7 @@
 
 /**
   *selection_sort- Selection sort function
+  *to sort array of ints in ascending order
   *@array: The array to sort
   *@size: The size
   */
@@ -10,7 +11,7 @@ void selection_sort(int *array, size_t size)
 	int temp, swapped, flags = 0;
 	size_t idx, i;
 
-	if (array == NULL)
+	if (!array || size < 2)
 		return;
 	for (i = 0; i < size; i++)
 	{
